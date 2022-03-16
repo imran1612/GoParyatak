@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/login2"
+            android:layout_weight="0.6"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.4">
+            <TextView
+                android:id="@+id/welcomeText"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:text="PLease enter your verification code" />
+
+            <com.mukesh.OtpView
+                android:id="@+id/otp_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="72dp"
+                android:inputType="number"
+                android:layout_gravity="center"
+                android:itemBackground="@color/darkgreen"
+                android:textColor="@android:color/white"
+                app:OtpItemCount="4"
+                app:OtpLineColor="@color/darkgreen"
+                app:OtpViewType="line" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_login"
+                android:text="Verify"
+                android:textColor="@color/white"
+                android:background="#0000FF"
+                android:layout_margin="16dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

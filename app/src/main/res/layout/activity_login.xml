@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/login_page"
+        android:layout_weight="0.4">
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="0.6">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/loginText"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:text="@string/login_text" />
+            <TextView
+                android:id="@+id/helpText"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="#0000FF"
+                android:textStyle="bold"
+                android:paddingRight="30dp"
+                android:layout_gravity="right"
+                android:text="@string/help_text" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/phoneText"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:text="@string/phone_text" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_mobileNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:prefixText="+91"
+            android:layout_margin="10dp"
+            >
+
+            <EditText
+                android:id="@+id/mobile_no"
+                android:layout_centerVertical="true"
+                android:ems="10"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:text=""
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+                <requestFocus/>
+
+            </EditText>
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:id="@+id/passwordText"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:paddingLeft="16dp"
+            android:textSize="16sp"
+            android:text="Password" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_password"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            app:passwordToggleEnabled="true"
+            app:passwordToggleDrawable="@drawable/show_password_selector"
+            >
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_centerVertical="true"
+                android:inputType="textVisiblePassword"
+                android:text=""
+                android:paddingLeft="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/edit_text_border"
+                android:textColor="@color/black"
+                android:layout_height="50dp"
+                android:layout_width="match_parent">
+
+            </EditText>
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_login"
+            android:text="@string/login_text"
+            android:textColor="@color/white"
+            android:background="#0000FF"
+            android:layout_margin="16dp"/>
+
+        <TextView
+            android:id="@+id/orText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="or" />
+
+        <LinearLayout
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/layout_border"
+            android:orientation="horizontal" >
+            <ImageView
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:background="#0000"
+                android:src="@drawable/google_icon"/>
+            <TextView
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#0000"
+                android:text="Log in with Google" />
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>
